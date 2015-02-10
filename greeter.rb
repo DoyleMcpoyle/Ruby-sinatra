@@ -6,6 +6,7 @@ class Greeter
   
 
   def quote tag=nil
+  	link = "http://therecordingrevolution.com/wordpress/wp-content/uploads/2013/09/frank-sinatra-4de018e8e403b.jpg"
   	quotes = {
 			:life => [
 				"The best revenge is massive success.",
@@ -18,7 +19,7 @@ class Greeter
   	}
 
   	if tag && quotes[tag.to_sym]
-  		quotes[tag.to_sym].sample
+  		quotes[tag.to_sym].sample + "<img src= '#{link}'>"
   	else
   		"please try again"
   	end
